@@ -1,0 +1,16 @@
+﻿@model dynamic
+@{
+    ViewBag.Title = "viewEmployees";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>viewEmployees</h2>
+Model
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@item.Name</td>
+        <td>@item.Id</td>
+    </tr>
+}

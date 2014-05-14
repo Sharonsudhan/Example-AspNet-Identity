@@ -1,0 +1,13 @@
+﻿@model Chapter1.models.Role
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br /><br /><br /><br /><br /><br />
+@using (Html.BeginForm("Delete", "Manage", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.Label("Enter the User Name : ") <br /><br />  @Html.TextBoxFor(r => r.Name)
+    <input type="submit" value="Submit" />
+}
+<br />
+@ViewBag.Status

@@ -1,0 +1,20 @@
+﻿@model Chapter1.models.UserRole
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br /><br /><br />
+
+Add User to role<br/><br/>
+@using (Html.BeginForm("Index", "Manage", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.TextBoxFor(r => r.userName)
+    <br />
+    @Html.TextBoxFor(r => r.roleName)
+    <input type="submit" value="Submit" />
+}
+
+@ViewBag.Status
+
+<br /><br />
+@Html.ActionLink("Delete user", "Delete","Manage")
